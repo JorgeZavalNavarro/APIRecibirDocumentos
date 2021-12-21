@@ -117,7 +117,7 @@ public class APIRestRecibirAdjuntoIF {
             retorno.setRespuestaBoolean("false");
             retorno.setCodigoRespuesta(ex.getIdError());
             retorno.setDescripcionRespuesta(ex.getMensaje());
-            retorno.setMensajeServicio("");
+            retorno.setMensajeServicio(ex.getMensaje());
             retorno.setFechaSolicitud(fechaInicio);
             retorno.setFechaRespuesta(CoreBean.fechaActual());
             retorno.setFolioDocumento("");
@@ -128,8 +128,8 @@ public class APIRestRecibirAdjuntoIF {
             retorno = new RecibirAdjuntoOutputVO();
             retorno.setRespuestaBoolean("false");
             retorno.setCodigoRespuesta(CodeKeys.CODE_980_ERROR);
-            retorno.setDescripcionRespuesta(ex.getLocalizedMessage());
-            retorno.setMensajeServicio("");
+            retorno.setDescripcionRespuesta(ex.getMessage());
+            retorno.setMensajeServicio(ex.getMessage());
             retorno.setFechaSolicitud(fechaInicio);
             retorno.setFechaRespuesta(CoreBean.fechaActual());
             retorno.setFolioDocumento("");
@@ -140,8 +140,8 @@ public class APIRestRecibirAdjuntoIF {
             retorno = new RecibirAdjuntoOutputVO();
             retorno.setRespuestaBoolean("false");
             retorno.setCodigoRespuesta(CodeKeys.CODE_980_ERROR);
-            retorno.setDescripcionRespuesta(ex.getLocalizedMessage());
-            retorno.setMensajeServicio("");
+            retorno.setDescripcionRespuesta(ex.getMessage());
+            retorno.setMensajeServicio(ex.getMessage());
             retorno.setFechaSolicitud(fechaInicio);
             retorno.setFechaRespuesta(CoreBean.fechaActual());
             retorno.setFolioDocumento("");
